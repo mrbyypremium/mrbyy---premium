@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,11 +17,12 @@
     .hero button:hover { background: #145dbf; }
     .products, .steps, .testimoni { padding: 2rem; max-width: 1000px; margin: auto; }
     .products h2, .steps h2, .testimoni h2 { text-align: center; margin-bottom: 1.5rem; color: #1877f2; }
-    .product { background: white; border-left: 4px solid #1877f2; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: 0.2s; }
+    .product { background: white; border-left: 4px solid #1877f2; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: 0.2s; display: flex; gap: 1rem; align-items: center; }
     .product:hover { transform: scale(1.01); }
-    .product h3 { color: #333; margin-bottom: 0.5rem; }
+    .product h3 { color: #333; margin-bottom: 0.5rem; min-width: 180px; }
     .product ul { padding-left: 1rem; list-style: circle; }
     .product ul li { margin-bottom: 0.5rem; }
+    .product img { width: 48px; height: 48px; object-fit: contain; }
     .step-list { display: flex; flex-direction: column; gap: 1rem; }
     .step { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; gap: 1rem; align-items: center; }
     .step::before { content: '\2713'; color: green; font-weight: bold; font-size: 1.5rem; }
@@ -30,6 +32,7 @@
     footer { margin-top: 3rem; font-size: 0.9rem; }
     @media (max-width: 600px) {
       .hero h1 { font-size: 2rem; }
+      .product { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -46,24 +49,39 @@
 
   <section class="products" id="produk">
     <h2>List Produk</h2>
-    <div class="product"><h3>NETFLIX</h3><ul><li>1P1U - Rp35.500</li><li>1P2U - Rp20.500</li></ul></div>
-    <div class="product"><h3>CANVA PRO</h3><ul><li>1 TAHUN - Rp9.500</li></ul></div>
-    <div class="product"><h3>CHATGPT PLUS 4.0</h3><ul><li>1 BULAN - Rp25.500</li></ul></div>
-    <div class="product"><h3>VIU PREMIUM</h3><ul><li>1 TAHUN - Rp6.500</li><li>SEUMUR HIDUP - Rp20.500</li></ul></div>
-    <div class="product"><h3>ALIGHT MOTION</h3><ul><li>1 TAHUN SHARING - Rp7.500</li><li>1 TAHUN PRIVATE - Rp12.500</li></ul></div>
-    <div class="product"><h3>SPOTIFY PREMIUM</h3><ul><li>1 BULAN PRIVATE - Rp20.000</li><li>2 BULAN PRIVATE - Rp32.500</li></ul></div>
-    <div class="product"><h3>YOUTUBE PREMIUM</h3><ul><li>1 BULAN - Rp8.500</li><li>3 BULAN - Rp20.500</li></ul></div>
-    <div class="product"><h3>WE TV</h3><ul><li>1 BULAN SHARING - Rp11.500</li></ul></div>
-    <div class="product"><h3>CAPCUT PRO</h3><ul><li>7 HARI SHARING - Rp5.500</li><li>7 HARI PRIVATE - Rp7.500</li><li>1 BULAN SHARING - Rp12.500</li><li>1 BULAN PRIVATE - Rp17.500</li></ul></div>
-    <div class="product"><h3>RCTI+ SPORTS</h3><ul><li>RCTI + SPORTS - Rp25.500</li></ul></div>
-    <div class="product"><h3>BSTATION PREMIUM</h3><ul><li>1 TAHUN SHARING - Rp10.500</li></ul></div>
-    <div class="product"><h3>CATCHPLAY+</h3><ul><li>1 BULAN SHARING - Rp7.500</li></ul></div>
-    <div class="product"><h3>VIDIO PLATINUM + LIGA 1</h3><ul><li>1 BULAN SHARING - Rp18.500</li><li>1 BULAN PRIVATE - Rp29.500</li></ul></div>
-    <div class="product"><h3>IQIYI PREMIUM</h3><ul><li>1 TAHUN SHARING - Rp10.500</li></ul></div>
-    <div class="product"><h3>CRUNCHYROLL PREMIUM</h3><ul><li>1 TAHUN SHARING - Rp10.500</li></ul></div>
-    <div class="product"><h3>YOUKU PREMIUM</h3><ul><li>1 TAHUN SHARING - Rp10.500</li></ul></div>
-  </section>
+    <!-- Produk akan dimasukkan melalui script -->
+<div class="product">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo"/>
+  <div><h3>Netflix</h3>
+  <ul>
+    <li>1P1U - Rp35.500</li>
+    <li>1P2U - Rp20.500</li>
+  </ul></div>
+</div>
+<div class="product">
+  <img src="https://seeklogo.com/images/C/canva-logo-1D29C8F21C-seeklogo.com.png" alt="Canva Pro logo"/>
+  <div><h3>Canva Pro</h3>
+  <ul>
+    <li>1 TAHUN - Rp9.500</li>
+  </ul></div>
+</div>
+<div class="product">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Plus logo"/>
+  <div><h3>ChatGPT Plus</h3>
+  <ul>
+    <li>1 BULAN - Rp25.500</li>
+  </ul></div>
+</div>
+<div class="product">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Viu_logo.svg" alt="Viu Premium logo"/>
+  <div><h3>Viu Premium</h3>
+  <ul>
+    <li>1 TAHUN - Rp6.500</li>
+    <li>SEUMUR HIDUP - Rp20.500</li>
+  </ul></div>
+</div>
 
+  </section>
   <section class="steps">
     <h2>Cara Pembelian</h2>
     <div class="step-list">
@@ -73,13 +91,19 @@
       <div class="step">Melakukan pembayaran</div>
     </div>
   </section>
-
   <section class="testimoni">
     <h2>Testimoni</h2>
-    <div class="testi-item"><img src="https://via.placeholder.com/40" alt="avatar" /><div><span>Fajar</span>: "Pelayanan cepat dan akun langsung aktif!"</div></div>
-    <div class="testi-item"><img src="https://via.placeholder.com/40" alt="avatar" /><div><span>Ani</span>: "Murah banget! Awalnya ragu, tapi ternyata mantap."</div></div>
+    <div class="testi-item">
+      <img src="https://via.placeholder.com/40" alt="avatar" />
+      <div><span>Fajar</span>: "Pelayanan cepat dan akun langsung aktif!"</div>
+    </div>
+    <div class="testi-item">
+      <img src="https://via.placeholder.com/40" alt="avatar" />
+      <div><span>Ani</span>: "Murah banget! Awalnya ragu, tapi ternyata mantap."</div>
+    </div>
   </section>
-
-  <footer>© 2025 APLIKASI PREMIUM</footer>
+  <footer>
+    © 2025 APLIKASI PREMIUM
+  </footer>
 </body>
 </html>
